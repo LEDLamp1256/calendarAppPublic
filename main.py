@@ -94,6 +94,8 @@ def saveDay():
         nextMonth = 1
         nextYear += 1
     for idx, day in enumerate(cal.itermonthdays(nextYear, nextMonth)):
+        if day == 0:
+            continue
         if daysAhead > 0:
             daysAhead -= 1
             if daysAhead == 3:
